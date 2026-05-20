@@ -1,0 +1,6 @@
+# Core Pytest Framework
+pytest>=8.0.0
+
+# Official Microsoft Playwright Pytest Integration
+# Note: After running 'pip install -r requirements.txt', run 'playwright install' to download browser binaries.
+pytest-playwright>=0.5.0

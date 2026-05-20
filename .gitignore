@@ -1,0 +1,20 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest Caches and Reports
+.pytest_cache/
+reports/
+report.html
+
+# IDE Specific (PyCharm)
+.idea/
+.vscode/
+
+
