@@ -1,10 +1,10 @@
-# 🎭 Playwright Pytest Sandbox
+# Playwright Pytest Sandbox
 
 A lightweight, pre-configured sandbox template for writing and running end-to-end (E2E) web automation tests using **Python**, **pytest**, and **Playwright**.
 
 ---
 
-## 🚀 Quick Start (Onboarding)
+## Quick Start (Onboarding)
 
 We have provided a bootstrap script that automates the creation of the virtual environment, updates `pip`, installs the requirements, and downloads the required Playwright browser engines.
 
@@ -24,7 +24,7 @@ playwright install
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 Once the setup is complete, activate your virtual environment:
 ```cmd
@@ -45,7 +45,7 @@ You can now run your test suite with `pytest`:
 
 ---
 
-## 🔍 Advanced Debugging & Tracing
+## Advanced Debugging & Tracing
 
 One of Playwright's most powerful features is **Tracing**, which records DOM changes, console logs, network requests, and screenshots of every single action during a test run.
 
@@ -62,7 +62,7 @@ Upload the generated trace `.zip` file to [trace.playwright.dev](https://trace.p
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Playwright_sandbox/
