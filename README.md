@@ -24,6 +24,25 @@ playwright install
 
 ---
 
+## Environment Variables & Credentials
+
+Create a `.env` file in the root directory to provide your TMDB credentials and API read access token.
+
+- `TMDB_USERNAME` and `TMDB_PASSWORD` are used for front-end user login testing.
+- `TMDB_API_READ_ACCESS_TOKEN` is used by the test suite to query the TMDB API and verify that the UI results accurately match the backend database.
+
+**Note on Missing Credentials (Fallback Behavior)**:
+- If `TMDB_USERNAME` and `TMDB_PASSWORD` are omitted, the global login setup is skipped, and the tests will execute seamlessly as an anonymous guest user.
+- If `TMDB_API_READ_ACCESS_TOKEN` is omitted, the tests will automatically fallback to "Mock API" mode. The API queries will not execute, and the scraped UI results will be evaluated against a static list of mock titles instead.
+
+```env
+TMDB_USERNAME=your_username
+TMDB_PASSWORD=your_password
+TMDB_API_READ_ACCESS_TOKEN=your_api_read_access_token
+```
+
+---
+
 ## Running Tests
 
 Once the setup is complete, activate your virtual environment:
