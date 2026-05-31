@@ -32,6 +32,11 @@ def verify_scraped_against_backend(scraped_titles: list[str], backend_titles: li
     print(f"Retrieved from API Backend: {len(backend_titles)} titles")
     print(f"API Mode: {'MOCK FALLBACK' if is_mock else 'REAL PRODUCTION API'}")
     
+    if len(scraped_titles) == 0 and len(backend_titles) == 0:
+        print("\nSUCCESS: Both UI and API returned 0 results. This is a valid match.")
+        print("=" * 60 + "\n")
+        return 0
+
     matches = []
     matched_backend_indices = set()
     
