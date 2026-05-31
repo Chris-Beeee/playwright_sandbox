@@ -1,4 +1,4 @@
-# Playwright Pytest Sandbox
+# Playwright Pytest
 
 A lightweight, pre-configured sandbox template for writing and running end-to-end (E2E) web automation tests using **Python**, **pytest**, and **Playwright**.
 
