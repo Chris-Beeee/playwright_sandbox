@@ -4,6 +4,24 @@ A lightweight, pre-configured sandbox template for writing and running end-to-en
 
 ---
 
+## Architecture Diagram
+
+```mermaid
+graph TD
+    A[Pytest Test Suite] -->|Drives UI| B(Page Object Model)
+    A -->|Verifies Data| C(Backend Verifier)
+    
+    B -->|Uses| D[Playwright]
+    D -->|Interacts with| E[TMDB Website / UI]
+    
+    C -->|Fetches Expected Data| F(TMDB API Client)
+    
+    F -->|Real Data| G((Real TMDB API))
+    F -.->|Fallback / Mock Mode| H[(Local Mock Data)]
+    
+    C -->|Compares| E
+```
+
 ## Quick Start (Onboarding)
 
 We have provided a bootstrap script that automates the creation of the virtual environment, updates `pip`, installs the requirements, and downloads the required Playwright browser engines.
@@ -80,24 +98,6 @@ If a test fails, a `test-results/` directory will be created containing a `.zip`
 Upload the generated trace `.zip` file to [trace.playwright.dev](https://trace.playwright.dev) in your browser to inspect execution frame-by-frame.
 
 ---
-
-## Architecture Diagram
-
-```mermaid
-graph TD
-    A[Pytest Test Suite] -->|Drives UI| B(Page Object Model)
-    A -->|Verifies Data| C(Backend Verifier)
-    
-    B -->|Uses| D[Playwright]
-    D -->|Interacts with| E[TMDB Website / UI]
-    
-    C -->|Fetches Expected Data| F(TMDB API Client)
-    
-    F -->|Real Data| G((Real TMDB API))
-    F -.->|Fallback / Mock Mode| H[(Local Mock Data)]
-    
-    C -->|Compares| E
-```
 
 ## Project Structure
 
